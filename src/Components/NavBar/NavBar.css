@@ -1,0 +1,62 @@
+
+
+/* Navbar relativa a su contenedor */
+.navbar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 60px;
+  background-color: #1e1e2f;
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  border-radius: 0 10px 10px 0;
+  box-shadow: 2px 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar.open {
+  width: 200px;
+}
+
+.nav-header {
+  text-align: center;
+  padding: 1rem;
+  background-color: #29293d;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-links li {
+  padding: 15px 20px;
+  transition: background-color 0.2s;
+}
+
+.nav-links li:hover {
+  background-color: #343456;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.95rem;
+}
+
+.navbar.closed .nav-links a {
+  display: none;
+}
+
+/* Para dejar espacio al contenido */
+#separador h1, #separador p {
+  margin-left: 80px; /* espacio para la navbar cerrada */
+  transition: margin-left 0.3s ease;
+}
+
+.navbar.open ~ h1,
+.navbar.open ~ p {
+  margin-left: 220px; /* espacio cuando la navbar está abierta */
+}

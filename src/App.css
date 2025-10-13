@@ -1,5 +1,13 @@
-body{
+*{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+#separador {
+  width: 100%;
+  position: relative;
+  display: flex;
+  min-height: 400px; /* ejemplo, puedes ajustarlo */
+  background-color: #f8f8f8;
+  padding: 20px;
 }
