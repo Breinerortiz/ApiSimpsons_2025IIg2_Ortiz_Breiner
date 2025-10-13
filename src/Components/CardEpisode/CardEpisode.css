@@ -6,11 +6,12 @@
   text-align: center;
   padding: 18px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+ 
 }
 
 .episode-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 6px 18px rgb(255, 0, 0);
 }
 
 .episode-name {
