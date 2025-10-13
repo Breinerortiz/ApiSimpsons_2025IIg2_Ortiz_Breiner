@@ -8,6 +8,8 @@ import EpisodiesPage from './Pages/EpisodiesPage/EpisodiesPage'
 import CharactersPage from './Pages/CharactersPage/CharactersPage'
 import LocationPage from './Pages/LocationPage/LocationPage'
 import CharacterDetails from "./Pages/CharacterDetails/CharacterDetails";
+import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+
 function App() {
   
   return (
@@ -21,6 +23,8 @@ function App() {
           <Route path='/personajes' element={<CharactersPage />} />
           <Route path='/localizacion' element={<LocationPage />} />
           <Route path="/personaje/:id" element={<CharacterDetails />} />
+          <Route path="*" element={<NotFoundPage />} />
+         
         </Routes>
       </div>
             

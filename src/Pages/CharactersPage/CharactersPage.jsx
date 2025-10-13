@@ -50,7 +50,7 @@ const CharactersPage = () => {
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "50px",
+          gap: "70px",
           marginTop: "20px",
         }}
       >
