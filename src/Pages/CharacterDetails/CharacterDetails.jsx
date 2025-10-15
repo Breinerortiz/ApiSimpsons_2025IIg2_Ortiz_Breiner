@@ -4,45 +4,59 @@ import "./CharacterDetails.css";
 
 const CharacterDetails = () => {
   const { id } = useParams();
-  const [character, setCharacter] = useState(null);
+  const [personaje, setPersonaje] = useState(null);
 
   useEffect(() => {
     fetch(`https://thesimpsonsapi.com/api/characters/${id}`)
       .then((res) => res.json())
-      .then((data) => setCharacter(data));
+      .then((data) => setPersonaje(data))
+      .catch((err) => console.error("Error al obtener personaje:", err));
   }, [id]);
 
-  if (!character) return <p className="loading">Cargando...</p>;
+  if (!personaje) return <p className="loading">Cargando personaje...</p>;
+
+  const frase =
+    personaje.phrases && personaje.phrases.length > 0
+      ? personaje.phrases[0]
+      : "Este personaje no tiene registrada una frase célebre 😅";
 
   return (
     <div className="details-container">
       <div className="details-card">
         <img
-          src={`https://cdn.thesimpsonsapi.com/500${character.portrait_path}`}
-          alt={character.name}
+          src={`https://cdn.thesimpsonsapi.com/500${personaje.portrait_path}`}
+          alt={personaje.name}
           className="details-img"
         />
 
-        <h1 className="details-name">{character.name}</h1>
-        <h3 className="details-occupation">{character.occupation}</h3>
+        <h1 className="details-name">{personaje.name}</h1>
+        <h3 className="details-occupation">
+          {personaje.occupation || "Ocupación no disponible"}
+        </h3>
 
         <div className="details-info">
           <p>
-            <strong>Edad:</strong> {character.age}
+            <strong>Edad:</strong> {personaje.age || "No especificada"}
           </p>
           <p>
             <strong>Estado:</strong>{" "}
             <span
               className={`status ${
-                character.status === "Alive" ? "alive" : "dead"
+                personaje.status === "Alive" ? "alive" : "dead"
               }`}
             >
-              {character.status}
+              {personaje.status === "Alive"
+                ? "Vivo"
+                : personaje.status === "Deceased"
+                ? "Fallecido"
+                : "Desconocido"}
             </span>
           </p>
-          {character.phrases && character.phrases.length > 0 && (
-            <p className="quote">"{character.phrases[0]}"</p>
-          )}
+
+          {/* Frase célebre claramente indicada */}
+          <p className="quote">
+            <strong>Frase célebre:</strong> {frase}
+          </p>
         </div>
 
         <Link to="/personajes" className="back-btn">
