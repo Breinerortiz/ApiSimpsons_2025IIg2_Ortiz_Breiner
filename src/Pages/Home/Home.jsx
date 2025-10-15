@@ -61,7 +61,7 @@ const Home = () => {
             ease: "easeInOut",
           }}
         >
-          <ArrowBack sx={{ fontSize: 70, color: "#ffffff" }} />
+          <ArrowBack sx={{ fontSize: 70, color: "#0207ffff" }} />
         </motion.div>
       </motion.div>
     </div>
