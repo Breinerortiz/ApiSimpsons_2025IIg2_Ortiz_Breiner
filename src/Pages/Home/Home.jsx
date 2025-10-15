@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowBack } from "@mui/icons-material";  // 👈 Cambiado aquí
+import { ArrowBack } from "@mui/icons-material";
 import "./Home.css";
 import homer from "../../assets/Familia_S.png";
 
@@ -36,6 +36,19 @@ const Home = () => {
           ¡Bienvenido a Springfield!
         </motion.h1>
 
+        {/* Descripción de la app */}
+        <motion.p
+          className="home-text"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1, duration: 1 }}
+        >
+          Explora el increíble mundo de <strong>Los Simpsons</strong> 🏡  
+          Descubre información sobre tus personajes favoritos 👨‍👩‍👧,  
+          revive episodios clásicos 📺 y conoce las icónicas locaciones de Springfield 📍.  
+          ¡Todo en un solo lugar!
+        </motion.p>
+
         {/* Flecha animada apuntando al NavBar (izquierda) */}
         <motion.div
           className="arrow-icon"
@@ -48,7 +61,7 @@ const Home = () => {
             ease: "easeInOut",
           }}
         >
-          <ArrowBack sx={{ fontSize: 70, color: "#0400ffff" }} />
+          <ArrowBack sx={{ fontSize: 70, color: "#ffffff" }} />
         </motion.div>
       </motion.div>
     </div>
