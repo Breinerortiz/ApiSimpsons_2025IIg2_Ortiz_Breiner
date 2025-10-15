@@ -33,7 +33,7 @@ const Home = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: 0.5, duration: 0.8 }}
         >
-          ¡Bienvenido a Springfield!
+          ¡Bienvenido a la Api de Springfield!
         </motion.h1>
 
         {/* Descripción de la app */}
