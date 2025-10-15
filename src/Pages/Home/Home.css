@@ -1,4 +1,5 @@
 /* ======== Fondo principal animado ======== */
+/* ======== Fondo principal animado ======== */
 .home-container {
   display: flex;
   justify-content: center;
@@ -33,7 +34,6 @@
   width: 300px;
   max-width: 80%;
   margin-bottom: 20px;
- 
   pointer-events: none;
   filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
 }
@@ -60,29 +60,86 @@
 }
 
 /* ======== Flecha animada ======== */
-/* ======== Flecha animada ======== */
 .arrow-icon {
   cursor: default;
-  margin-top: -30px;         /* 🔸 Sube la flecha */
+  margin-top: -30px; /* 🔸 Sube la flecha */
   transition: transform 0.3s ease;
 }
 
-
 /* ======== Responsividad ======== */
-@media (max-width: 768px) {
+
+/* 📱 Celulares */
+@media (max-width: 480px) {
+  .home-container {
+    height: auto;
+    padding: 40px 15px;
+  }
+
+  .home-img {
+    width: 200px;
+    margin-bottom: 15px;
+  }
+
   .home-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
   }
 
   .home-text {
-    font-size: 1rem;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .arrow-icon svg {
+    font-size: 40px;
+  }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .home-container {
+    height: auto;
+    padding: 60px 30px;
   }
 
   .home-img {
     width: 250px;
   }
 
+  .home-title {
+    font-size: 2.2rem;
+  }
+
+  .home-text {
+    font-size: 1rem;
+  }
+
   .arrow-icon svg {
-    font-size: 50px !important;
+    font-size: 50px;
   }
 }
+
+/* 💻 Pantallas grandes */
+@media (min-width: 1025px) {
+  .home-container {
+    height: calc(100vh - 150px);
+    padding: 20px;
+  }
+
+  .home-img {
+    width: 300px;
+  }
+
+  .home-title {
+    font-size: 2.5rem;
+  }
+
+  .home-text {
+    font-size: 1.2rem;
+  }
+
+  .arrow-icon svg {
+    font-size: 60px;
+  }
+}
+
