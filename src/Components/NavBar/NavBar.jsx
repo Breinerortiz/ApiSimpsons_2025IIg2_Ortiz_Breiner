@@ -13,7 +13,7 @@ const NavBar = () => {
       onMouseLeave={() => setIsOpen(false)}
     >
       <div className="nav-header">
-        <h2>{isOpen ? "mi sitio de trabajo" : "MS"}</h2>
+        <h2>{isOpen ? "mi panel" : "MS"}</h2>
       </div>
 
       <ul className="nav-links">
