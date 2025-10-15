@@ -1,0 +1,86 @@
+/* ======== Fondo principal animado ======== */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 150px);
+  width: 100%;
+  background: linear-gradient(-45deg, #ffca3a, #fca311, #f4a261, #ffb703);
+  background-size: 400% 400%;
+  animation: gradientMove 15s ease infinite;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Animación del gradiente */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ======== Contenido ======== */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+}
+
+/* ======== Imagen flotante ======== */
+.home-img {
+  width: 350px;
+  max-width: 80%;
+  margin-bottom: 20px;
+ 
+  pointer-events: none;
+  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+}
+
+/* ======== Título ======== */
+.home-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #003566;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+/* ======== Subtexto ======== */
+.home-text {
+  font-size: 1.2rem;
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.home-text strong {
+  color: #003566;
+}
+
+/* ======== Flecha animada ======== */
+.arrow-icon {
+  cursor: default;
+  margin-top: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* ======== Responsividad ======== */
+@media (max-width: 768px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .home-text {
+    font-size: 1rem;
+  }
+
+  .home-img {
+    width: 250px;
+  }
+
+  .arrow-icon svg {
+    font-size: 50px !important;
+  }
+}

@@ -9,6 +9,7 @@ import CharactersPage from './Pages/CharactersPage/CharactersPage'
 import LocationPage from './Pages/LocationPage/LocationPage'
 import CharacterDetails from "./Pages/CharacterDetails/CharacterDetails";
 import NotFoundPage from "./Pages/NotFoundPage/NotFoundPage";
+import Home from "./Pages/Home/Home";
 
 function App() {
   
@@ -18,7 +19,8 @@ function App() {
     
       <div id='separador'>
         <NavBar/>
-       <Routes>        
+       <Routes>     
+         <Route path="/" element={<Home />} />   
           <Route path='/episodios' element={<EpisodiesPage />} />
           <Route path='/personajes' element={<CharactersPage />} />
           <Route path='/localizacion' element={<LocationPage />} />

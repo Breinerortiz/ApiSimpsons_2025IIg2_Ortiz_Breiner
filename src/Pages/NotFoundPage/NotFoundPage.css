@@ -1,74 +1,114 @@
 .notfound-container {
-  /* Ocupa todo el alto visible sin invadir el footer */
-  min-height: 80vh ;
-  width: 100%;
-  /* Resta el alto del footer */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff8e1;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  width: 95%;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff8e1;
-  text-align: center;
-  padding: 2rem;
-  margin-left: 60px; /* ajusta al ancho de tu sidebar si es fija */
-  box-sizing: border-box;
 }
 
+
+/* Tarjeta central */
 .notfound-content {
   background-color: #f5deb3;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
   padding: 2rem;
-  max-width: 480px;
   width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+/* Imagen de Homero */
 .notfound-img {
-    height: 300px;
-  width: 300px;
+  width: 60%;
+  max-width: 220px;
+  height: auto;
   margin-bottom: 1rem;
- 
+  object-fit: contain;
 }
 
+/* Título */
 .notfound-title {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #ffb300;
-  margin-bottom: 0.5rem;
   font-weight: bold;
+  margin-bottom: 0.8rem;
+  line-height: 1.3;
 }
 
+/* Texto descriptivo */
 .notfound-text {
+  font-size: 1rem;
   color: #333;
   margin-bottom: 1.5rem;
 }
 
+/* Botón */
 .notfound-button {
   background-color: #1976d2 !important;
   color: #fff !important;
-  border-radius: 8px !important;
-  padding: 0.5rem 1.5rem !important;
+  border-radius: 10px !important;
+  padding: 0.6rem 1.4rem !important;
+  text-transform: none !important;
 }
 
 .notfound-button:hover {
   background-color: #115293 !important;
 }
 
-/* 📱 Responsive */
+/* 📱 RESPONSIVE DESIGN */
 @media (max-width: 768px) {
   .notfound-container {
-    margin-left: 0; /* el sidebar puede ocultarse en móvil */
-    min-height: calc(100vh - 100px);
-    padding: 1.5rem;
+    margin-left: 0;
+    padding: 1rem;
+    min-height: calc(100vh - 120px);
   }
 
   .notfound-content {
-    max-width: 90%;
+    width: 90%;
+    padding: 1.5rem;
   }
 
   .notfound-title {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .notfound-img {
-    width: 140px;
+    max-width: 160px;
+  }
+
+  .notfound-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .notfound-content {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .notfound-img {
+    max-width: 130px;
+  }
+
+  .notfound-title {
+    font-size: 1.2rem;
+  }
+
+  .notfound-text {
+    font-size: 0.85rem;
   }
 }

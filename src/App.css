@@ -12,4 +12,5 @@
   min-height: 400px; /* ejemplo, puedes ajustarlo */
   background-color: aqua;
   padding: 20px;
+  overflow: hidden;
 }

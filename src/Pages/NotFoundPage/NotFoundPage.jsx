@@ -19,10 +19,17 @@ const NotFoundPage = () => {
         <p className="notfound-text">
           La página que intentas visitar no existe o fue movida.
         </p>
-       
+        <Button
+          variant="contained"
+          className="notfound-button"
+          onClick={() => navigate("/")}
+        >
+          Volver al inicio
+        </Button>
       </div>
     </div>
   );
 };
 
 export default NotFoundPage;
+ 
